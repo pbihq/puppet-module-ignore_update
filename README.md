@@ -2,7 +2,7 @@
 
 This Puppet module allows you to manage ignored system software updates on macOS.
 It is essentially just a wrapper for the built-in 'softwareupdate' binary.
-This is particularly useful for delaying major macOS upgrades.
+This is particularly [useful for delaying major macOS upgrades](https://twitter.com/hammen/status/1181295216600338432).
 
 ## How to use this module
 
@@ -88,3 +88,6 @@ ignore_update::items: []
 Tested with Puppet 5 on macOS 10.14.6
 
 For further information have a look at the manpage for "softwareupdate".
+
+Thanks to [Stephen](https://twitter.com/wegotoeleven) and [Robert Hamman](https://twitter.com/hammen/status/1181295216600338432) for discovering how to to ignore macOS Catalina /
+macOS upgrades.
