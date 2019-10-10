@@ -7,7 +7,7 @@ class ignore_update::service {
       command   => '/usr/sbin/softwareupdate --reset-ignored',
     }
 
-    if $items != [] {
+    if ($items) and ($items != []) {
       $items_string = join(['"', join($items, '" "'), '"'])
       exec { 'add items to ignored updates':
         command => "/usr/sbin/softwareupdate --ignore ${items_string}",
