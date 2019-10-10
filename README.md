@@ -29,8 +29,8 @@ and version number)" (manpage for softwareupdate).
 
 Hence, our resulting list of identifiers is:
 
-- "macOS Mojave 10.14.6 Supplemental Update 2"
-- "Safari13.0.2MojaveAuto"
+- macOS Mojave 10.14.6 Supplemental Update 2
+- Safari13.0.2MojaveAuto
 
 ### Adding software items to Hiera
 
