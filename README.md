@@ -85,5 +85,6 @@ ignore_update::items: []
 
 ## Miscellaneous
 
-For further information have a look at the manpage for "softwareupdate".
 Tested with Puppet 5 on macOS 10.14.6
+
+For further information have a look at the manpage for "softwareupdate".
