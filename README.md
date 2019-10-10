@@ -64,6 +64,9 @@ via System Settings' Software Update pane. Add "macOS Catalina" to hide this
 prompt.
 
 ```yaml
+classes:
+  - ignore_update
+
 ignore_update::items:
   - macOS Catalina
 ```
@@ -74,6 +77,9 @@ To reset the list of ignored updates, remove the "ignore_update::items"
 key, remove its value or set it to an empty array
 
 ```yaml
+classes:
+  - ignore_update
+
 ignore_update::items: []
 ```
 
