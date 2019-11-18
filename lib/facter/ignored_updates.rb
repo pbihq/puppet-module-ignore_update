@@ -12,7 +12,7 @@ Facter.add(:ignored_updates) do
     elsif output =~ /^Ignored updates:/
       entries = output[/"[^"].*"/] # Match all results in quotes
         .delete('"')      # Remove quotes
-        .gsub(/\s+/, '')  # Remove leading and trailing white space
+        .strip            # Remove leading and trailing white space
         .split(',')       # Create array by splitting entries on commas
       entries
     else
