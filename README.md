@@ -1,8 +1,7 @@
 # puppet-module-ignore_update
 
 This Puppet module allows you to manage ignored system software updates on macOS.
-It is essentially just a wrapper for the built-in 'softwareupdate' binary.
-This is particularly [useful for delaying major macOS upgrades](https://twitter.com/hammen/status/1181295216600338432).
+It works as a wrapper for the built-in 'softwareupdate' binary.
 
 ## How to use this module
 
@@ -60,8 +59,10 @@ ignore_update::items:
 ### Ignoring software upgrade for macOS Catalina
 
 As of macOS 10.14.6 users are being prompted to install macOS Catalina directly
-via System Settings' Software Update pane. Add "macOS Catalina" to hide this
-prompt.
+via System Settings' Software Update pane. ~~Add "macOS Catalina" to hide this
+prompt.~~ **Note: Starting with 'Security Update 2020-003' on macOS Mojave and
+macOS High Sierra as well as macOS Catalina 10.15.5, [major new releases of macOS
+will no longer be hidden](https://support.apple.com/en-us/HT210642#macos10155)**.
 
 ```yaml
 classes:
@@ -85,7 +86,7 @@ ignore_update::items: []
 
 ## Miscellaneous
 
-Tested with Puppet 5 on macOS 10.14.6
+Tested with Puppet 5 on macOS 10.14.6 and macOS 10.15.4
 
 For further information have a look at the manpage for "softwareupdate".
 
