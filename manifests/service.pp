@@ -4,7 +4,8 @@ class ignore_update::service {
 
   if $facts['ignored_updates'] != $items {
     exec { 'reset ignored updates':
-      command   => '/usr/sbin/softwareupdate --reset-ignored',
+      before  => Exec['add items to ignored updates'],
+      command => '/usr/sbin/softwareupdate --reset-ignored',
     }
 
     if ($items) and ($items != []) {
