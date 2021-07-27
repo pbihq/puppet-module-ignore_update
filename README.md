@@ -1,5 +1,9 @@
 # puppet-module-ignore_update
 
+| :warning: NOTE                                                                                                                      |
+|:---------------------------------------------------------------------------------------------------------------------------------------|
+| On macOS 11 Big Sur, this module no longer works since [Apple has removed the underlying 'softwareupdate' API call](https://support.apple.com/HT211951) |
+
 This Puppet module allows you to manage ignored system software updates on macOS.
 It works as a wrapper for the built-in 'softwareupdate' binary.
 
